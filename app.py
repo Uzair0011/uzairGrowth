@@ -1,45 +1,24 @@
-# pip install streamlit
 import streamlit as st
 
-st.set_page_config(page_title="growth mindset project", project_icon="🌟")
+# Corrected `page_icon` instead of `project_icon`
+st.set_page_config(page_title="Growth Mindset Project", page_icon="🌟")
+
 st.title("Growth Mindset Challenge: Web App with Streamlit")
 
 st.header("Welcome to Your Growth Journey")
-st.write("Welcome to Your Growth Journeys  means you are starting a path of learning, improvement, and success. Its about growing your skills, gaining new experiences, and becoming a better version of yourself step by step. 🚀")
+st.write("Welcome to Your Growth Journey means you are starting a path of learning, improvement, and success. It's about growing your skills, gaining new experiences, and becoming a better version of yourself step by step. 🚀")
 
-# quote section
-st.header("Today Growth Mindset Quote")
-st.write("Success is not Final")
+# Quote Section
+st.header("Today's Growth Mindset Quote")
+st.write("Success is not final.")
 
-st.header("Whats is your Challenge")
-user_input = st.text_input("Describe a challenge you are facing ")
+# User Input Section
+st.header("What is Your Challenge?")
+user_input = st.text_input("Describe a challenge you are facing:")
 
-# condition
+# Condition to Display Message
 if user_input:
     st.success(
-        f" you are facing: {user_input}. Keep pushing forward towards your goal!")
+        f"You are facing: {user_input}. Keep pushing forward towards your goal! 💪")
 else:
-    st.warning("Tell us about your challenge")
-
-# reflexing
-st.header("Relection of your learning")
-reflection = st.text_area("Write your reflextion outcome:")
-
-if reflection:
-    st.success(f"Great insight! Your reflection:{reflection}")
-else:
-    st.info("Reflecting on past experience help you grow! shre your difficulties")
-
-# acheivement
-st.header("Celebrate Your Wins!")
-acheivement = st.text_area("Share something your are recently accomlished")
-
-if acheivement:
-    st.success(f"Amazing! You acheived:{acheivement}")
-else:
-    st.info("Big or small, every acheivement counts! share one now")
-
-# footer
-st.write("- - -")
-st.write("Keep believing in yourself. Growth is a journey, not a destination!")
-st.write("**Create by Uzair Ahmed**")
+    st.warning("Tell us about your challenge.")
